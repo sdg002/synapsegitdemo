@@ -1,0 +1,17 @@
+{
+	"name": "vwGetMeCurrentTime",
+	"properties": {
+		"content": {
+			"query": "\ndrop view if EXISTS vwGetMeCurrentServerTime\nGO\nCREATE VIEW vwGetMeCurrentServerTime AS\n--SELECT [name] from sys.objects\nSELECT GETDATE() as CurrentDate\n\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "mydatbase",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
