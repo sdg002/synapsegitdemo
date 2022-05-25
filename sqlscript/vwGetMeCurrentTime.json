@@ -2,7 +2,7 @@
 	"name": "vwGetMeCurrentTime",
 	"properties": {
 		"content": {
-			"query": "\ndrop view if EXISTS vwGetMeCurrentServerTime\nGO\nCREATE VIEW vwGetMeCurrentServerTime AS\n--SELECT [name] from sys.objects\nSELECT GETDATE() as CurrentDate\n\n\n",
+			"query": "\ndrop view if EXISTS vwGetMeCurrentServerTime\nGO\nCREATE VIEW vwGetMeCurrentServerTime AS\nSELECT GETDATE() as CurrentDate, 'Hello'   HelloColumn \n\n",
 			"metadata": {
 				"language": "sql"
 			},
